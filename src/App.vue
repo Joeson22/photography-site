@@ -1,32 +1,43 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      flat
+      
+    >
+      <Header />
+    </v-app-bar>
+
+    <v-content>
+      <Hero />
+      <Gallery />
+      <LatestPost />
+    </v-content>
+    <v-footer>
+      <Footer />
+    </v-footer>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Header from './components/Header.vue'
+import Hero from './components/Hero.vue'
+import Gallery from './components/Gallery.vue'
+import LatestPost from './components/LatestPost.vue'
+import Footer from './components/Footer.vue'
 
-nav {
-  padding: 30px;
-}
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Hero,
+    Gallery,
+    LatestPost,
+    Footer
+  },
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  data: () => ({
+    //
+  }),
+};
+</script>
