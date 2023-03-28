@@ -7,7 +7,7 @@
       v-for="item in items"
       :key="item.id"
       class="d-flex child-flex"
-      cols="4"
+      cols="6" sm="4"
     >
       <v-img
         :src="item.src"

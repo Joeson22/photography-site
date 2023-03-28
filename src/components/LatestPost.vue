@@ -3,7 +3,7 @@
     <v-container>
       <h2 class="text-center">Latest Post</h2>
       <v-row>
-        <v-col cols="4" v-for="item in items" :key="item.id">
+        <v-col cols="12"  sm="4" v-for="item in items" :key="item.id">
           <v-card outlined class="mx-auto">
             <v-img class="align-end text-white" height="200" :src="item.src" cover>
               <v-card-title>{{ item.title }}</v-card-title>

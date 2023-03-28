@@ -8,7 +8,7 @@
             :key="i"
             :src="item.src"
             cover>
-              <div class="d-flex fill-height title justify-center align-center">
+              <div class="d-flex fill-height title justify-center align-center hidden-xs-only">
                 <div >{{ item.title }}</div>
               </div>
           </v-carousel-item>
